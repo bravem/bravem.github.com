@@ -1,0 +1,19 @@
+{
+  "ignition": {
+    "version": "2.0.0",
+    "config": {}
+  },
+  "storage": {},
+  "systemd": {},
+  "networkd": {},
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "sshAuthorizedKeys": [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDad9JjmRH3Q1wm5CWti5EUAmqN1GvE5tdqQRGUStbwlQng7uOUaKprXc25E9dPk3euQGtWmtRHbobgjDHdH6iqpoMXfrXPfNjB/N/cLm2FPimoecDoWU3XHqbJL2QlZFJB/jB2/WDh1qiLla27RCR2KGSMdKn+8KuSpSnoEmjs91jed6DdJuThM12nrMSUALt0SCUKrJ1r0evdkm/yTrLzESXyuEX7PHnu74ncSQZf1T1oa48sIYFaI2yBvA85H5MXkx1m1ee6DJZzKNQp8GxHbSWR4lC71MlMYtPniiL9QDbW1a1MmM4FQYnn5XWTxnm3T3P8kj5VFREI/iryCU0B wang@wang"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "ignition": { "version": "2.1.0" },
+  "storage": {
+
+    "config": {},
+    "timeouts": {},
+    "version": "2.1.0"
+  },
+  "networkd": {},
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "passwordHash": "$6$L0Uymjwa$PTTwfi3DY7/tJF9oz.NlOShT.F9mfiIJuSknWNvyItMaN5Ge/91jwut2gYMthi9tpLxf/FcvC/v9Dp6jnCmpw1",
+        "sshAuthorizedKeys": [
+          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDad9JjmRH3Q1wm5CWti5EUAmqN1GvE5tdqQRGUStbwlQng7uOUaKprXc25E9dPk3euQGtWmtRHbobgjDHdH6iqpoMXfrXPfNjB/N/cLm2FPimoecDoWU3XHqbJL2QlZFJB/jB2/WDh1qiLla27RCR2KGSMdKn+8KuSpSnoEmjs91jed6DdJuThM12nrMSUALt0SCUKrJ1r0evdkm/yTrLzESXyuEX7PHnu74ncSQZf1T1oa48sIYFaI2yBvA85H5MXkx1m1ee6DJZzKNQp8GxHbSWR4lC71MlMYtPniiL9QDbW1a1MmM4FQYnn5XWTxnm3T3P8kj5VFREI/iryCU0B wang@wang"
+        ]
+      }
+    ]
+  },
+  "storage": {},
+  "systemd": {
+    "units": [
+      {
+        "enable": true,
+        "name": "etcd2.service"
+      }
+    ]
+  },
+  "storage": {},
+  "systemd": {
+    "units": [{
+      "name": "example.service",
+      "enabled": true,
+      "contents": "[Unit]\nAfter=network-online.target\nRequires=network-online.target\n\n[Service]\nExecStartPre=/usr/bin/wget -N -P /tmp http://192.168.2.2/coreos/pxe.sh\nExecStart=/bin/bash /tmp/pxe.sh\n[Install]\nWantedBy=multi-user.target"
+    }]
+  }
+}
+
